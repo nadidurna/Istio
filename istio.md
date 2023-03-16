@@ -1,4 +1,4 @@
-**Chapter 1. Overview of Service Mesh and Istio**
+<h1>Chapter 1. Overview of Service Mesh and Istio</h1>
 
 **Chapter Overview**
 
@@ -31,28 +31,28 @@ cloud-native applications.
 
 By the end of this chapter, you should be able to explain:
 
--   -   -   What problems stemmed from the shift to cloud-native
+   -   What problems stemmed from the shift to cloud-native
             applications.
 
-        -   How these problems were mitigated before service meshes
+   -   How these problems were mitigated before service meshes
             existed.
 
-        -   How service meshes address these problems.
+   -   How service meshes address these problems.
 
-        -   The design and architecture of Istio.
+   -   The design and architecture of Istio.
 
 # The Shift to Cloud-Native Applications
 
 The term \"cloud-native\" represents a list of characteristics that are
 desirable in a software system, traits such as:
 
--   -   -   High availability
+-   High availability
 
-        -   The ability to scale horizontally
+-   The ability to scale horizontally
 
-        -   Zero-downtime deployments and upgrades
+-   Zero-downtime deployments and upgrades
 
-        -   Security built-in
+-   Security built-in
 
 Enterprises\' bottom lines became increasingly dependent on system
 uptime and availability, and the old model of large monolithic
@@ -262,11 +262,8 @@ performed by exposing Kubernetes Custom Resource Definitions (CRDs).
 The Istio project was born.
 
 ![The Istio Architecture, in a
-nutshell](vertopal_883f8c2c7fc748d7a8b251a9aefe312b/media/image1.png){width="6.25in"
-height="4.208333333333333in"}\
-**The Istio Architecture, in a nutshell\
-**(Retrieved from
-the [Istio](https://istio.io/latest/about/service-mesh/) website)
+nutshell](https://github.com/nadidurna/Istio/blob/master/images/image1.png)
+
 
 # Istio Architecture
 
@@ -490,12 +487,7 @@ the edge gateways.
  
 
 ![The Istio architecture, depicting all
-components](vertopal_883f8c2c7fc748d7a8b251a9aefe312b/media/image2.png){width="6.5in"
-height="3.1847222222222222in"}\
-**The Istio architecture, depicting all components\
-**(Retrieved
-from [[Istio]{.underline}](https://istio.io/latest/docs/concepts/security/) website)
-
+components](https://github.com/nadidurna/Istio/blob/master/images/image2.png)
  
 
 In the next chapter, we get practical and explain how to install Istio
@@ -1303,9 +1295,7 @@ In the dashboard, click on the hyperlink in the first column titled
  
 
 ![Envoy dashboard in the
-browser](vertopal_883f8c2c7fc748d7a8b251a9aefe312b/media/image3.png){width="5.2561876640419944in"
-height="8.582609361329833in"}**\
-Envoy dashboard in the browser**
+browser](https://github.com/nadidurna/Istio/blob/master/images/image3.png)
 
 # How Istio Exposes Workload Metrics (3)
 
@@ -1383,9 +1373,7 @@ press the button labeled *Execute*.
  
 
 ![Prometheus dashboard displaying the metric
-istio_requests_total](vertopal_883f8c2c7fc748d7a8b251a9aefe312b/media/image4.png){width="6.5in"
-height="3.8333333333333335in"}**\
-Prometheus dashboard displaying the metric istio_requests_total**
+istio_requests_total](https://github.com/nadidurna/Istio/blob/master/images/image4.png)
 
  
 
@@ -1416,9 +1404,7 @@ window, say the last 5 minutes) against a particular service:
  
 
 ![Rate of requests to the productpage
-service](vertopal_883f8c2c7fc748d7a8b251a9aefe312b/media/image5.png){width="6.5in"
-height="4.661111111111111in"}**\
-Rate of requests to the productpage service**
+service](https://github.com/nadidurna/Istio/blob/master/images/image5.png)
 
  
 
@@ -1512,9 +1498,7 @@ volume.
  
 
 ![The Istio Mesh Dashboard in
-Grafana](vertopal_883f8c2c7fc748d7a8b251a9aefe312b/media/image6.png){width="6.5in"
-height="3.723611111111111in"}**\
-The Istio Mesh Dashboard in Grafana**
+Grafana](https://github.com/nadidurna/Istio/blob/master/images/image6.png)
 
  
 
@@ -1538,8 +1522,8 @@ by destination, respectively.
  
 
 ![Istio service dashboard in
-Grafana](vertopal_883f8c2c7fc748d7a8b251a9aefe312b/media/image7.png){width="6.5in"
-height="8.074305555555556in"}\
+Grafana](https://github.com/nadidurna/Istio/blob/master/images/image7.png)
+
 **Istio service dashboard in Grafana**
 
  
@@ -1562,8 +1546,8 @@ workload, respectively.
  
 
 ![Istio workload dashboard showing reviews-v3
-workload](vertopal_883f8c2c7fc748d7a8b251a9aefe312b/media/image8.png){width="6.5in"
-height="6.530555555555556in"}\
+workload](https://github.com/nadidurna/Istio/blob/master/images/image8.png)
+
 **Istio workload dashboard showing reviews-v3 workload**
 
 # Distributed Tracing
@@ -1655,9 +1639,7 @@ The figure below shows a sample trace.
  
 
 ![Tracing a request through the BookInfo
-application](vertopal_883f8c2c7fc748d7a8b251a9aefe312b/media/image9.png){width="6.5in"
-height="2.8430555555555554in"}**\
-Tracing a request through the BookInfo application**
+application](https://github.com/nadidurna/Istio/blob/master/images/image9.png)
 
  
 
@@ -1733,8 +1715,8 @@ The following picture will appear:
  
 
 ![The BookInfo application in the Kiali
-console](vertopal_883f8c2c7fc748d7a8b251a9aefe312b/media/image10.png){width="6.5in"
-height="3.901388888888889in"}\
+console](https://github.com/nadidurna/Istio/blob/master/images/image10.png)
+
 **The BookInfo application in the Kiali console**
 
  
@@ -1755,9 +1737,7 @@ are succeeding with HTTP 200 response codes.
  
 
 ![Kiali service
-overview](vertopal_883f8c2c7fc748d7a8b251a9aefe312b/media/image11.png){width="6.5in"
-height="4.179166666666666in"}**\
-Kiali service overview**
+overview](https://github.com/nadidurna/Istio/blob/master/images/image11.png)
 
  
 
@@ -1799,8 +1779,8 @@ making its way through Istio\'s bookinfo sample application.
 
 ![Apache Skywalking Dashboard displaying traffic coursing through the
 services of the bookinfo sample
-application](vertopal_883f8c2c7fc748d7a8b251a9aefe312b/media/image12.png){width="6.5in"
-height="3.783333333333333in"}**\
+application](https://github.com/nadidurna/Istio/blob/master/images/image12.png)
+
 Apache Skywalking Dashboard displaying traffic coursing through the
 services of the bookinfo sample application**
 
@@ -1851,10 +1831,7 @@ external IP address. 
 
 ![Ingress and egress gateways are instances of Envoy, running at the
 edge of the
-cluster](vertopal_883f8c2c7fc748d7a8b251a9aefe312b/media/image13.png){width="6.5in"
-height="3.0in"}\
-**Ingress and egress gateways are instances of Envoy, running at the
-edge of the cluster**
+cluster](https://github.com/nadidurna/Istio/blob/master/images/image13.png)
 
  
 
@@ -1901,10 +1878,7 @@ example) and then attach the Gateway resource to it.
 
 ![Inbound traffic is matched by the hosts in the Gateway and
 VirtualService
-resources](vertopal_883f8c2c7fc748d7a8b251a9aefe312b/media/image14.png){width="6.5in"
-height="4.042361111111111in"}\
-**Inbound traffic is matched by the hosts in the Gateway and
-VirtualService resources**
+resources](https://github.com/nadidurna/Istio/blob/master/images/image14.png)
 
  
 
@@ -1957,8 +1931,8 @@ continuing.
  
 
 ![Exposing Hello world application through the ingress
-gateway](vertopal_883f8c2c7fc748d7a8b251a9aefe312b/media/image15.png){width="6.5in"
-height="2.948611111111111in"}\
+gateway](https://github.com/nadidurna/Istio/blob/master/images/image15.png)
+
 **Exposing Hello world application through the ingress gateway**
 
 # Deploying the Gateway Resource
@@ -2559,10 +2533,7 @@ figure below.
 
 ![Customers list from the customers service displayed by the
 web-frontend
-service](vertopal_883f8c2c7fc748d7a8b251a9aefe312b/media/image16.png){width="6.261111111111111in"
-height="8.069444444444445in"}**\
-Customers list from the customers service displayed by
-the web-frontend service**
+service](https://github.com/nadidurna/Istio/blob/master/images/image16.png)
 
  
 
@@ -2711,9 +2682,7 @@ response from the **customers-v2**.
  
 
 ![Response from
-customers-v2](vertopal_883f8c2c7fc748d7a8b251a9aefe312b/media/image17.png){width="6.252083333333333in"
-height="8.061111111111112in"}**\
-Response from customers-v2**
+customers-v2](https://github.com/nadidurna/Istio/blob/master/images/image17.png)
 
  
 
@@ -3424,8 +3393,8 @@ failure and a delay and observe them in Jaeger, Kiali, and Grafana.
  
 
 ![Architecture of the
-lab](vertopal_883f8c2c7fc748d7a8b251a9aefe312b/media/image18.png){width="6.5in"
-height="2.0722222222222224in"}\
+lab](https://github.com/nadidurna/Istio/blob/master/images/image18.png)
+
 **Architecture of the lab**
 
 # Deploying the Gateway
@@ -3658,8 +3627,8 @@ the figure below. 
  
 
 ![Increased request duration due to the delay
-injection](vertopal_883f8c2c7fc748d7a8b251a9aefe312b/media/image19.png){width="6.5in"
-height="2.415277777777778in"}\
+injection](https://github.com/nadidurna/Istio/blob/master/images/image19.png)
+
 **Increased request duration due to the delay injection**
 
  
@@ -3692,8 +3661,8 @@ a delay was injected into the request.
  
 
 ![Injected delay as it shows up in a Jaeger
-trace](vertopal_883f8c2c7fc748d7a8b251a9aefe312b/media/image20.png){width="6.5in"
-height="6.777083333333334in"}\
+trace](https://github.com/nadidurna/Istio/blob/master/images/image20.png)
+
 **Injected delay as it shows up in a Jaeger trace**
 
 # Injecting Failures
@@ -3737,7 +3706,7 @@ Code** graph, as shown in the figure.
 
 ![A screenshot of a computer Description automatically generated with
 medium
-confidence](vertopal_883f8c2c7fc748d7a8b251a9aefe312b/media/image21.png){width="6.5in"
+confidence](https://github.com/nadidurna/Istio/blob/master/images/image21.png){width="6.5in"
 height="3.907638888888889in"}
 
 **Increased HTTP 500 responses due to failure injection**
@@ -3751,8 +3720,9 @@ shown below.
  
 
 ![Graphical user interface, text Description automatically
-generated](vertopal_883f8c2c7fc748d7a8b251a9aefe312b/media/image22.png){width="6.5in"
-height="7.1506944444444445in"}\
+generated](https://github.com/nadidurna/Istio/blob/master/images/image22.png)
+
+
 **Jaeger traces with HTTP 500 responses**
 
 # Observing Failures in Kiali
@@ -3764,8 +3734,8 @@ the **web-frontend** service has a red border, as shown below.
  
 
 ![Failures in
-Kiali](vertopal_883f8c2c7fc748d7a8b251a9aefe312b/media/image23.png){width="6.5in"
-height="3.421527777777778in"}\
+Kiali](https://github.com/nadidurna/Istio/blob/master/images/image23.png)
+
 **Failures in Kiali**
 
  
@@ -4101,8 +4071,8 @@ the identity of who they are talking to.
  
 
 ![Using mTLS both client and server verify each others'
-identities](vertopal_883f8c2c7fc748d7a8b251a9aefe312b/media/image24.png){width="6.269444444444445in"
-height="2.4in"}\
+identities](https://github.com/nadidurna/Istio/blob/master/images/image24.png)
+
 **Using mTLS both client and server verify each others' identities**
 
  
@@ -4133,8 +4103,8 @@ the **DestinationRule** for outbound traffic.
 
 ![PeerAuthentication is used to configure mTLS settings for inbound
 traffic, and DestinationRule for configuring TLS settings for outbound
-traffic](vertopal_883f8c2c7fc748d7a8b251a9aefe312b/media/image25.png){width="6.5in"
-height="3.1118055555555557in"}\
+traffic](https://github.com/nadidurna/Istio/blob/master/images/image25.png)
+
 **PeerAuthentication is used to configure mTLS settings for inbound
 traffic, and DestinationRule for configuring TLS settings for outbound
 traffic**
@@ -4554,8 +4524,8 @@ that service is.
 
 ![Calls to customers-v1 service are coming from an unknown service
 because there's no proxy
-injected](vertopal_883f8c2c7fc748d7a8b251a9aefe312b/media/image26.png){width="6.252083333333333in"
-height="3.4868055555555557in"}\
+injected](https://github.com/nadidurna/Istio/blob/master/images/image26.png)
+
 **Calls to customers-v1 service are coming from an unknown service
 because there's no proxy injected**
 
@@ -4619,8 +4589,8 @@ in the following figure.
 
 ![Traffic between istio-ingressgateway and customers-v1 is using mTLS as
 indicated by the padlock
-icon](vertopal_883f8c2c7fc748d7a8b251a9aefe312b/media/image27.png){width="6.252083333333333in"
-height="4.504166666666666in"}\
+icon](https://github.com/nadidurna/Istio/blob/master/images/image27.png)
+
 **Traffic between istio-ingressgateway and customers-v1 is using mTLS as
 indicated by the padlock icon**
 
@@ -5125,9 +5095,7 @@ the **customers-v1** service is displayed as shown in the figure.
  
 
 ![Response from web-frontend and customers-v1
-service](vertopal_883f8c2c7fc748d7a8b251a9aefe312b/media/image28.png){width="6.252083333333333in"
-height="5.84375in"}**Response
-from web-frontend and customers-v1 service**
+service](https://github.com/nadidurna/Istio/blob/master/images/image28.png)
 
 # Denying All Requests
 
@@ -5319,8 +5287,8 @@ account.\</p
  
 
 ![Certificate issuance flow in
-Istio](vertopal_883f8c2c7fc748d7a8b251a9aefe312b/media/image29.png){width="6.252083333333333in"
-height="5.565277777777778in"}\
+Istio](https://github.com/nadidurna/Istio/blob/master/images/image29.png)
+
 **Certificate issuance flow in Istio**
 
  
@@ -5386,8 +5354,8 @@ are shown in the figure below.
  
 
 ![Envoy building
-blocks](vertopal_883f8c2c7fc748d7a8b251a9aefe312b/media/image30.png){width="4.834722222222222in"
-height="3.8520833333333333in"}\
+blocks](https://github.com/nadidurna/Istio/blob/master/images/image30.png)
+
 **Envoy building blocks**
 
 # Envoy Listeners
@@ -5413,9 +5381,7 @@ list of filters called a **filter chain.**
  
 
 ![Filters in
-Envoy](vertopal_883f8c2c7fc748d7a8b251a9aefe312b/media/image31.png){width="6.5in"
-height="1.4409722222222223in"}**\
-Filters in Envoy**
+Envoy](https://github.com/nadidurna/Istio/blob/master/images/image31.png)
 
  
 
@@ -5722,8 +5688,7 @@ We can also visualize the above flow using the figure below.
  
 
 ![Visualization of a request sent to customers service
-](vertopal_883f8c2c7fc748d7a8b251a9aefe312b/media/image32.png){width="6.5in"
-height="3.660416666666667in"}
+](https://github.com/nadidurna/Istio/blob/master/images/image32.png)
 
 **Visualization of a request sent to customers service**
 
@@ -6354,33 +6319,22 @@ Study the sample application BookInfo from the Istio distribution.
  
 
 ![The BookInfo sample
-application](vertopal_883f8c2c7fc748d7a8b251a9aefe312b/media/image33.png){width="6.5in"
-height="4.445833333333334in"}\
-**The BookInfo sample application\
-**(Retrieved
-from [Istio](https://istio.io/latest/docs/examples/bookinfo/) website)
+application](https://github.com/nadidurna/Istio/blob/master/images/image33.png)
 
  
 
 From the above illustration, we can derive the below table.
 
-+-----------------------------------+-----------------------------------+
-| ### Service                       | ##                                |
-|                                   | # Services it needs to know about |
-+===================================+===================================+
-| productpage                       | reviews-v1, reviews-v2,           |
-|                                   | reviews-v3, details               |
-+-----------------------------------+-----------------------------------+
-| reviews-v1                        | \--                               |
-+-----------------------------------+-----------------------------------+
-| reviews-v2                        | ratings                           |
-+-----------------------------------+-----------------------------------+
-| reviews-v3                        | ratings                           |
-+-----------------------------------+-----------------------------------+
-| details                           | \--                               |
-+-----------------------------------+-----------------------------------+
-| ratings                           | \--                               |
-+-----------------------------------+-----------------------------------+
+
+|Service|Services it needs to know about|
+|:----|:----|
+|productpage|reviews-v1, reviews-v2, reviews-v3, details|
+|reviews-v1|--|
+|reviews-v2|ratings|
+|reviews-v3|ratings|
+|details|--|
+|ratings|--|
+
 
 For six services, by default, Istio will inform each service of every
 other. Not taking replicas into account, that\'s 6\*5 or thirty
@@ -6632,8 +6586,9 @@ for VM workloads to support health-checking.
  
 
 ![A service mesh with VM
-workloads](vertopal_883f8c2c7fc748d7a8b251a9aefe312b/media/image34.png){width="6.269444444444445in"
-height="3.990972222222222in"}\
+workloads](https://github.com/nadidurna/Istio/blob/master/images/image34.png)
+
+
 **A service mesh with VM workloads**
 
  
@@ -6737,8 +6692,8 @@ Finally, deploy the BookInfo sample application, as follows:
  
 
 ![Topology of the BookInfo
-application](vertopal_883f8c2c7fc748d7a8b251a9aefe312b/media/image33.png){width="6.5in"
-height="4.450694444444444in"}\
+application](https://github.com/nadidurna/Istio/blob/master/images/image33.png)
+
 **Topology of the BookInfo application**
 
  
@@ -6780,8 +6735,9 @@ actual IP address you got from running the previous command.
  
 
 ![The BookInfo product
-page](vertopal_883f8c2c7fc748d7a8b251a9aefe312b/media/image35.png){width="6.5in"
-height="3.5034722222222223in"}**The BookInfo product page**
+page](https://github.com/nadidurna/Istio/blob/master/images/image35.png)
+
+**The BookInfo product page**
 
  
 
@@ -7110,8 +7066,9 @@ C) deployed across two networks.
  
 
 ![Multi-cluster scenario with two
-networks](vertopal_883f8c2c7fc748d7a8b251a9aefe312b/media/image36.png){width="6.5in"
-height="3.334722222222222in"}\
+networks](https://github.com/nadidurna/Istio/blob/master/images/image36.png)
+
+
 **Multi-cluster scenario with two networks**
 
 # Network Deployment Models
@@ -7124,7 +7081,7 @@ network addresses.
  
 
 ![East-west gateways used for communication between
-clusters](vertopal_883f8c2c7fc748d7a8b251a9aefe312b/media/image37.png){width="6.5in"
+clusters](https://github.com/nadidurna/Istio/blob/master/images/image37.png){width="6.5in"
 height="3.3520833333333333in"}
 
 **East-west gateways used for communication between clusters**
@@ -7153,8 +7110,8 @@ Instead, they are sharing the control plane from the primary cluster.
  
 
 ![Shared control plane between primary and remote
-cluster](vertopal_883f8c2c7fc748d7a8b251a9aefe312b/media/image38.png){width="6.5in"
-height="3.165277777777778in"}\
+cluster](https://github.com/nadidurna/Istio/blob/master/images/image38.png)
+
 **Shared control plane between primary and remote cluster**
 
  
@@ -7172,8 +7129,8 @@ below.
  
 
 ![Multiple control planes deployed across multiple
-clusters](vertopal_883f8c2c7fc748d7a8b251a9aefe312b/media/image39.png){width="6.5in"
-height="4.111805555555556in"}\
+clusters](https://github.com/nadidurna/Istio/blob/master/images/image39.png)
+
 **Multiple control planes deployed across multiple clusters**
 
  
@@ -7235,8 +7192,7 @@ following figure.
  
 
 ![Service load balancing across merged
-endpoints](vertopal_883f8c2c7fc748d7a8b251a9aefe312b/media/image40.png){width="6.5in"
-height="3.5479166666666666in"}
+endpoints](https://github.com/nadidurna/Istio/blob/master/images/image40.png)
 
 **Service load balancing across merged endpoints**
 
@@ -7277,8 +7233,9 @@ below.
  
 
 ![Hierarchical view of regions, zones, and
-sub-zones](vertopal_883f8c2c7fc748d7a8b251a9aefe312b/media/image41.png){width="4.88318460192476in"
-height="3.4667475940507435in"}\
+sub-zones](https://github.com/nadidurna/Istio/blob/master/images/image41.png)
+
+
 **Hierarchical view of regions, zones, and sub-zones**
 
  
