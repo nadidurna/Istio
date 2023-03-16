@@ -78,12 +78,12 @@ emulate these successes in their own organizations.
 
 Platform companies such as Heroku shared their experience and provided
 guidance for moving to cloud-native with the publication of
-the [[Twelve-Factor App]{.underline}](https://12factor.net/). Others
+the [Twelve-Factor App](https://12factor.net/). Others
 built on this foundation, and added to the wisdom by raising the
 importance of API-first development, having security \"built-in\", and
 the importance of telemetry. To read more about this topic, check
-out [*[Beyond the Twelve-Factor
-App.]{.underline}*](https://tanzu.vmware.com/content/blog/beyond-the-twelve-factor-app)
+out [Beyond the Twelve-Factor
+App.](https://tanzu.vmware.com/content/blog/beyond-the-twelve-factor-app)
 
 These transitions took a long time and required significant effort,
 primarily because the new microservices architecture, also known as
@@ -406,7 +406,7 @@ requests and responses between services; the Istio control plane is not.
 Let us explore a number of simple scenarios in order to better
 understand the kind of configuration that the sidecars require.
 
--   -   1.  Imagine a sidecar for an instance of service A intercepting
+  1.  Imagine a sidecar for an instance of service A intercepting
             an outgoing request to service B. Service B may be backed by
             a Kubernetes Deployment with, say, three replicas. Service
             A\'s sidecar must know about all three endpoints: their
@@ -416,12 +416,12 @@ understand the kind of configuration that the sidecars require.
             request timeouts, number of retries, outlier detection, and
             more.
 
-        2.  Imagine an operator specifying that all mesh traffic should
+  2.  Imagine an operator specifying that all mesh traffic should
             be encrypted. The sidecar needs to be aware of this
             configuration in order to decide whether or not to upgrade
             the connection.
 
-        3.  Imagine a situation where we\'re doing A/B testing. We have
+  3.  Imagine a situation where we\'re doing A/B testing. We have
             two subsets of service B\'s endpoints, with a rule to send
             certain types of requests to one subset and the rest to the
             other. Those subsets and rules must be communicated to the
@@ -464,11 +464,11 @@ outside the mesh, or traffic bound to a destination outside the mesh).
 
 Indeed, there exist today multiple open-source and commercial
 implementations of Kubernetes Ingress controllers built on
-Envoy. [[Contour]{.underline}](https://projectcontour.io/) and [[Emissary-ingress]{.underline}](https://www.getambassador.io/products/api-gateway/) are
+Envoy. [Contour](https://projectcontour.io/) and [Emissary-ingress](https://www.getambassador.io/products/api-gateway/) are
 two examples.
 
-***Aside**:  The Envoy project recently [[announced the Envoy Gateway
-project]{.underline}](https://www.cncf.io/blog/2022/05/16/introducing-envoy-gateway/),
+***Aside**:  The Envoy project recently [announced the Envoy Gateway
+project](https://www.cncf.io/blog/2022/05/16/introducing-envoy-gateway/),
 a collaborative effort to develop an open-source solution for Ingress
 based on Envoy. *
 
@@ -493,9 +493,7 @@ components](https://github.com/nadidurna/Istio/blob/master/images/image2.png)
 In the next chapter, we get practical and explain how to install Istio
 on a Kubernetes cluster and begin the journey of exploration.
 
-[\
-[Chapter 2. Installing
-Istio]{.underline}](https://learning.edx.org/course/course-v1:LinuxFoundationX+LFS144x+3T2022/block-v1:LinuxFoundationX+LFS144x+3T2022+type@sequential+block@1a4e5f79ddd146c38b53d81e46115bc6)
+<h1>Chapter 2. Installing Istio</h1>
 
 # Chapter Overview
 
@@ -537,32 +535,24 @@ Six configuration profiles are currently available, as shown in the list
 below. To get an up-to-date list of Istio configuration profiles, run
 the **istioctl profile list** command.
 
--   -   -   **Default profile\
-            **The default profile is meant for production deployments
-            and deployments of primary clusters in multi-cluster
-            scenarios. It deploys the control plane and ingress gateway.
+ -   **Default profile**
+        The default profile is meant for production deployments and deployments of primary clusters in multi-cluster scenarios. It deploys the control plane and ingress gateway.
 
-        -   **Demo profile**\
-            The demo profile is intended for demonstration deployments.
-            It deploys the control plane and ingress and egress gateways
-            and has a high level of tracing and access logging enabled.
+ -   **Demo profile**\
+        The demo profile is intended for demonstration deployments. It deploys the control plane and ingress and egress gateways and has a high level of tracing and access logging enabled.
 
-        -   **Minimal profile**\
-            The minimal profile is equivalent to the default profile but
-            without the ingress gateway. It deploys the control plane.
+ -   **Minimal profile**\
+        The minimal profile is equivalent to the default profile but without the ingress gateway. It deploys the control plane.
 
-        -   **External profile**\
-            The external profile is used for configuring remote clusters
-            in a multi-cluster scenario. It does not deploy any
-            components.
+ -   **External profile**\
+        The external profile is used for configuring remote clusters in a multi-cluster scenario. It does not deploy any components.
 
-        -   **Empty profile**\
-            The empty profile is used as a base for custom
-            configuration. It does not deploy any components.
+ -   **Empty profile**\
+        The empty profile is used as a base for custom configuration. It does not deploy any components.
 
-        -   **Preview profile**\
-            The preview profile contains experimental features. It
-            deploys the control plane and ingress gateway.
+ -   **Preview profile**\
+        The preview profile contains experimental features. It
+        deploys the control plane and ingress gateway.
 
 To install Istio using the Istio CLI, we can use the **\--set** flag and
 specify the profile like this:
@@ -571,7 +561,7 @@ specify the profile like this:
 
 Later, we will cover how to install and customize Istio by creating an
 IstioOperator resource and installing it using the Istio CLI. We will
-also cover how to use [[Helm]{.underline}](https://helm.sh/) and deploy
+also cover how to use [Helm](https://helm.sh/) and deploy
 the Istio Helm charts.
 
 # Exploring the Configuration Profile Details
@@ -633,7 +623,7 @@ it.
 # Using Istio Operator API
 
 The Istio Operator API and the [IstioOperator
-resource]{.underline} allow us to install and configure Istio on a
+resource] allow us to install and configure Istio on a
 Kubernetes cluster. At a high level, we can separate the configuration
 in the IstioOperator resource into the following sections:
 
@@ -667,7 +657,7 @@ the cluster using the **install** command:
 
 # Using Helm
 
-[[Helm]{.underline}](https://helm.sh/) is a Kubernetes package manager
+[Helm](https://helm.sh/) is a Kubernetes package manager
 that helps install and upgrade complex applications on Kubernetes. A
 fundamental building block of Helm is a Helm Chart, a collection of YAML
 manifests.
@@ -675,20 +665,20 @@ manifests.
 When using Helm, there are three different Helm charts we need to be
 aware of, listed in the order we would install them:
 
-1.  1.  1.  **Base chart (istio/base)**\
+ 1.  **Base chart (istio/base)**\
             The **base** chart includes cluster-wide resources such as
             the validating webhook configuration resource, service
             accounts, cluster roles and bindings, and other resources to
             ensure backward compatibility.
 
-        2.  **Istiod chart (istio/istiod)**\
+  2.  **Istiod chart (istio/istiod)**\
             The **istiod** chart contains Istio's control plane
             installation. It includes the **istiod** deployment and
             service, mutating webhook configuration (facilitates
             automatic sidecar injection into deployments), and other
             resources for the control plane.
 
-        3.  **Gateway chart (istio/gateway)**\
+  3.  **Gateway chart (istio/gateway)**\
             The **gateway** chart is used for deploying ingress and
             egress gateways to the cluster. It includes the service and
             deployment resources and other supporting resources. 
@@ -782,14 +772,14 @@ that can be used for this purpose.
 Alternatively, you can run a Kubernetes cluster locally on your computer
 using one of the following platforms:
 
--   -   -   [[Minikube]{.underline}](https://istio.io/latest/docs/setup/platform-setup/minikube/)
+  -   [Minikube](https://istio.io/latest/docs/setup/platform-setup/minikube/)
 
-        -   [[Docker
-            Desktop]{.underline}](https://istio.io/latest/docs/setup/platform-setup/docker/)
+   -   [Docker
+            Desktop](https://istio.io/latest/docs/setup/platform-setup/docker/)
 
-        -   [[kind]{.underline}](https://istio.io/latest/docs/setup/platform-setup/kind/)
+   -   [kind](https://istio.io/latest/docs/setup/platform-setup/kind/)
 
-        -   [[MicroK8s]{.underline}](https://istio.io/latest/docs/setup/platform-setup/microk8s/)
+   -   [MicroK8s](https://istio.io/latest/docs/setup/platform-setup/microk8s/)
 
 When using a local Kubernetes cluster such as Minikube, ensure your
 computer meets the minimum requirements for Istio installation (e.g.,
@@ -834,10 +824,10 @@ installation manifests, samples, and tools.
 The easiest way to install the latest version is to use
 the **downloadIstio** script:
 
-1.  1.  1.  Open a terminal window and navigate to the folder where you
+  1.  Open a terminal window and navigate to the folder where you
             want to download Istio
 
-        2.  Run the download script:\
+   2.  Run the download script:\
             \
             **\$ curl -L https://istio.io/downloadIstio \|
             ISTIO_VERSION=1.14.3 sh -**
@@ -847,7 +837,7 @@ called **istio-1.14.3**. 
 
 ***Note:** If your organization requires FIPS-certified distributions of
 Istio, you can read more about
-them [[here]{.underline}](https://tetr8.io/istio-fips). *
+them [here](https://tetr8.io/istio-fips). *
 
 To run the  **istioctl** from any folder, we should include its
 fully-qualified path in the **PATH** environment variable, as shown
@@ -879,8 +869,8 @@ Create a file called **demo-profile.yaml** with the following contents:
 **  profile: demo**
 
 ***Note: **You can download the supporting YAML and other files
-from [[this Github
-repo]{.underline}](https://tetr8.io/cncf-source-files).*
+from [this Github
+repo](https://tetr8.io/cncf-source-files).*
 
 The last thing we need to do is to deploy the *IstioOperator* resource
 using the **istioctl install** command:
@@ -914,14 +904,11 @@ the **istio-system** namespace:
 
 **\$ kubectl get po -n istio-system**
 
-**NAME                                    READY   STATUS    RESTARTS 
- AGE\
-istio-egressgateway-6db9994577-sn95p    1/1     Running   0         
-79s\
-istio-ingressgateway-58649bfdf4-cs4fk   1/1     Running   0         
-79s\
-istiod-dd4b7db5-nxrjv                   1/1     Running   0         
-111s**
+| |Name|Ready|Status|Restarts|Age| |
+|:----|:----|:----|:----|:----|:----|:----|
+| |istio-egressgateway-6db9994577-sn95p| 1/1|Running|0|79s| |
+| |istio-ingressgateway-58649bfdf4-cs4fk| 1/1|Running|0|79s| |
+| |istiod-dd4b7db5-nxrjv| 1/1|Running|0|113s| |
 
 # Enable Sidecar Injection
 
@@ -946,12 +933,15 @@ the **istio-injection** label:
 To check that the namespace is labeled, run the command below:
 
 **\$ kubectl get namespace -L istio-injection\
-NAME              STATUS   AGE    ISTIO-INJECTION\
-default           Active   114m   enabled\
-istio-system      Active   29m\
-kube-node-lease   Active   114m\
-kube-public       Active   114m\
-kube-system       Active   114m**
+
+
+| |Name|Statu|Age|Istio-Injection| 
+|:----|:----|:----|:----|:----|
+| |default |  Active |114m|enabled |
+| |istio-system |  Active | 29m|
+| |kube-node-lease|  Active |114m|
+| |kube-public|  Active |114m|
+| |kube-system|  Active |114m|
 
 The default namespace should be the only one with the
 value **enabled** in the **ISTIO-INJECTION** column.
@@ -1073,8 +1063,8 @@ command:
 
 **istioctl x uninstall \--purge**
 
-[[Chapter 3.
-Observability]{.underline}](https://learning.edx.org/course/course-v1:LinuxFoundationX+LFS144x+3T2022/block-v1:LinuxFoundationX+LFS144x+3T2022+type@sequential+block@aeb3a6c2bfcf4853b4d5197ba0010a22)
+[Chapter 3.
+Observability](https://learning.edx.org/course/course-v1:LinuxFoundationX+LFS144x+3T2022/block-v1:LinuxFoundationX+LFS144x+3T2022+type@sequential+block@aeb3a6c2bfcf4853b4d5197ba0010a22)
 
 # Chapter Overview
 
@@ -1086,25 +1076,25 @@ extensibility.  In this chapter, we explore observability.
 
 By the end of this chapter, you should be able to:
 
--   -   -   Understand the difference between monitoring and
+ -   Understand the difference between monitoring and
             observability.
 
-        -   Understand the value that Istio provides with respect to
+  -   Understand the value that Istio provides with respect to
             metrics collection and observability.
 
-        -   Learn how metrics are collected in Istio.
+  -   Learn how metrics are collected in Istio.
 
-        -   Learn what specific metrics are collected.
+  -   Learn what specific metrics are collected.
 
-        -   Learn how to query the Prometheus metrics store using
+  -   Learn how to query the Prometheus metrics store using
             promQL.
 
-        -   Gain familiarity with the Grafana monitoring dashboards for
+  -   Gain familiarity with the Grafana monitoring dashboards for
             Istio.
 
-        -   Understand the concept and purpose of distributed tracing.
+  -   Understand the concept and purpose of distributed tracing.
 
-        -   Visualize traffic flow with the Kiali console.
+  -   Visualize traffic flow with the Kiali console.
 
 # From Monitoring Monoliths to Observability for Microservices
 
@@ -1203,13 +1193,13 @@ Navigate to the base directory of your Istio distribution:
 
 **cd \~/istio-1.14.3**
 
-Deploy the [BookInfo]{.underline} sample application that is bundled
+Deploy the [BookInfo] sample application that is bundled
 with the Istio distribution.
 
 **kubectl apply -f samples/bookinfo/platform/kube/bookinfo.yaml**
 
 Finally, deploy the
-bundled [[sleep]{.underline}](https://github.com/istio/istio/tree/master/samples/sleep) sample
+bundled [sleep](https://github.com/istio/istio/tree/master/samples/sleep) sample
 service:
 
 **kubectl apply -f samples/sleep/sleep.yaml**
@@ -1432,7 +1422,7 @@ monitoring dashboards, to which we turn our attention in the next lab.
 
 # Grafana Dashboards for Istio (1)
 
-[[Grafana]{.underline}](https://grafana.com/) is a popular open-source
+[Grafana](https://grafana.com/) is a popular open-source
 tool that makes it easy to construct custom monitoring dashboards from a
 backing metrics source. Grafana has built-in support for Prometheus.
 
@@ -1784,8 +1774,8 @@ application](https://github.com/nadidurna/Istio/blob/master/images/image12.png)
 Apache Skywalking Dashboard displaying traffic coursing through the
 services of the bookinfo sample application**
 
-[[Chapter 4. Traffic
-Management]{.underline}](https://learning.edx.org/course/course-v1:LinuxFoundationX+LFS144x+3T2022/block-v1:LinuxFoundationX+LFS144x+3T2022+type@sequential+block@1f36c3ccc9574e79a938ad6e3e3bed74)
+[Chapter 4. Traffic
+Management](https://learning.edx.org/course/course-v1:LinuxFoundationX+LFS144x+3T2022/block-v1:LinuxFoundationX+LFS144x+3T2022+type@sequential+block@1f36c3ccc9574e79a938ad6e3e3bed74)
 
 # Chapter Overview
 
@@ -1963,7 +1953,7 @@ settings.
 **        - \'\*\'**
 
 ***NOTE: **You can download the supporting YAML and other files from
-this [Github repo]{.underline}.*
+this [Github repo].*
 
 Save the above YAML to **gateway.yaml** and deploy the Gateway
 using **kubectl apply -f gateway.yaml**
@@ -2374,8 +2364,8 @@ Let us start by deploying the Gateway:
 **        - \'\*\'**
 
  ***NOTE:** You can download the supporting YAML and other files
-from [[this Github
-repo]{.underline}](https://tetr8.io/cncf-source-files).*
+from [this Github
+repo](https://tetr8.io/cncf-source-files).*
 
  Save the above YAML to **gateway.yaml** and deploy the Gateway
 using **kubectl apply -f gateway.yaml**.
@@ -2935,8 +2925,8 @@ We will start by deploying the Gateway:
 **        - \'\*\'**
 
 ***NOTE:** You can download the supporting YAML and other files
-from [[this Github
-repo]{.underline}](https://tetr8.io/cncf-source-files).*
+from [this Github
+repo](https://tetr8.io/cncf-source-files).*
 
 Save the above YAML to **gateway.yaml** and deploy the Gateway
 using **kubectl apply -f gateway.yaml**.
@@ -3162,7 +3152,7 @@ If we open the **GATEWAY_IP**, we should still get the response
 from **customers-v1**. If we add the header **user: debug** to the
 request, you will notice that the response comes from **customers-v2**.
 
-We can use the [ModHeader extension]{.underline} to modify the headers
+We can use the [ModHeader extension] to modify the headers
 from the browser. Alternatively, we can use cURL and add the header to
 the request, like this:
 
@@ -3179,7 +3169,7 @@ the **customers-v2** service.
 
 Similarly, if you open **GATEWAY_IP** in the browser, the response will
 be from the **customers-v1** service. If you add the **user:
-debug** header (using the [ModHeader]{.underline} or other similar
+debug** header (using the [ModHeader] or other similar
 extensions) and refresh the page, you will notice the response will be
 coming from the **customers-v2** service.
 
@@ -3417,8 +3407,8 @@ Start by deploying the Gateway:
 **        - \'\*\'**
 
 ***NOTE**: You can download the supporting YAML and other files
-from [[this Github
-repo]{.underline}](https://tetr8.io/cncf-source-files).*
+from [this Github
+repo](https://tetr8.io/cncf-source-files).*
 
 Save the above YAML to **gateway.yaml** and create the Gateway
 using **kubectl apply -f gateway.yaml**.
@@ -3932,8 +3922,8 @@ Inspect the following resource:
 **  location: MESH_EXTERNAL**
 
 ***NOTE:** You can download the supporting YAML and other files
-from [[this Github
-repo]{.underline}](https://tetr8.io/cncf-source-files).*
+from [this Github
+repo](https://tetr8.io/cncf-source-files).*
 
 Note how the location field is set to **MESH_EXTERNAL** and how the
 specification matches the hostname and port we wish to access.
@@ -3961,9 +3951,9 @@ configuration can be overlaid with AuthorizationPolicy resources that
 specify which internal mesh services are allowed to call which external
 services.
 
-This entire process is summarized in [[this video interview with Michael
+This entire process is summarized in [this video interview with Michael
 Acostamadiedo, on Tetrate\'s Tech Talks (Episode
-15)]{.underline}](https://youtu.be/u-6Ejgeu8Xk).
+15)](https://youtu.be/u-6Ejgeu8Xk).
 
 # Cleanup
 
@@ -3972,8 +3962,8 @@ To clean up, run the following commands:
 **kubectl delete -f samples/sleep/sleep.yaml**\
 **kubectl delete serviceentry github-external**
 
-[[Chapter 5.
-Security]{.underline}](https://learning.edx.org/course/course-v1:LinuxFoundationX+LFS144x+3T2022/block-v1:LinuxFoundationX+LFS144x+3T2022+type@sequential+block@8bc9c35231ef49cf8a84dc1681fd8291)
+[Chapter 5.
+Security](https://learning.edx.org/course/course-v1:LinuxFoundationX+LFS144x+3T2022/block-v1:LinuxFoundationX+LFS144x+3T2022+type@sequential+block@8bc9c35231ef49cf8a84dc1681fd8291)
 
 # Chapter Overview
 
@@ -4318,8 +4308,8 @@ Let\'s start by deploying a Gateway resource:
 **        - \'\*\'**
 
 *** NOTE**: You can download the supporting YAML and other files
-from [[this Github
-repo]{.underline}](https://tetr8.io/cncf-source-files).*
+from [this Github
+repo](https://tetr8.io/cncf-source-files).*
 
 Save the above YAML to **gateway.yaml** and deploy the Gateway using the
 following command:
@@ -4909,9 +4899,9 @@ based on that. Next, the **DENY** policies matching the request get
 evaluated. If we get past those, and if there are no **ALLOW** policies
 set, we will allow the request. If any **ALLOW** policies match the
 request, we will also allow it. If they do not, the request gets denied.
-For a complete flowchart of authorization policy precedence, [[refer to
+For a complete flowchart of authorization policy precedence, [refer to
 this
-page]{.underline}](https://istio.io/latest/docs/concepts/security/#implicit-enablement).  
+page](https://istio.io/latest/docs/concepts/security/#implicit-enablement).  
 
 A good practice is to create a policy denying all requests. Once we have
 that in place, we can create individual **ALLOW** policies and
@@ -4938,8 +4928,8 @@ access between workloads. Let\'s start by deploying the Gateway:
 **        - \'\*\'**
 
 ***NOTE: **You can download the supporting YAML and other files
-from [[this Github
-repo]{.underline}](https://tetr8.io/cncf-source-files).*
+from [this Github
+repo](https://tetr8.io/cncf-source-files).*
 
 Save the above YAML to **gateway.yaml** and deploy the Gateway
 using **kubectl apply -f gateway.yaml**.
@@ -5317,8 +5307,8 @@ In the last step, the Istio agent streams back the signed certificate to
 the Envoy proxy via SDS over a Unix domain socket. This allows Envoy
 proxy to use the certificate when needed.
 
-[[Chapter 6. Extending the
-Mesh]{.underline}](https://learning.edx.org/course/course-v1:LinuxFoundationX+LFS144x+3T2022/block-v1:LinuxFoundationX+LFS144x+3T2022+type@sequential+block@2dc12437a8664185bdb5750d26474191)
+[Chapter 6. Extending the
+Mesh](https://learning.edx.org/course/course-v1:LinuxFoundationX+LFS144x+3T2022/block-v1:LinuxFoundationX+LFS144x+3T2022+type@sequential+block@2dc12437a8664185bdb5750d26474191)
 
 # Chapter Overview
 
@@ -5405,7 +5395,7 @@ At a high level, there are three types of filters in Envoy:
     (HCM). Other example network filters are a rate limit filter, Redis
     proxy filter, Mongo proxy, connection limit filter, and others. See
     the complete list of built-in network
-    filters [[here]{.underline}](https://www.envoyproxy.io/docs/envoy/latest/configuration/listeners/network_filters/network_filters).
+    filters [here](https://www.envoyproxy.io/docs/envoy/latest/configuration/listeners/network_filters/network_filters).
 
 -   **HTTP filters**\
     The HTTP filters operate at L7 with the HTTP data. The HTTP
@@ -5696,7 +5686,7 @@ We can also visualize the above flow using the figure below.
 
 Istio automatically generates the Envoy configuration for each proxy in
 the mesh.  To customize the Envoy proxy configuration, we can use
-the **[EnvoyFilter]{.underline}** resource. 
+the **[EnvoyFilter]** resource. 
 
 EnvoyFilters can update configuration values, add or remove filters,
 create new listeners, clusters, etc.
@@ -5864,7 +5854,7 @@ the C++ filters.
 
 # What is WebAssembly (WASM)?
 
-[[WebAssemby]{.underline}](https://webassembly.org/) (Wasm) is a
+[WebAssemby](https://webassembly.org/) (Wasm) is a
 portable binary format for executable code that relies on an open
 standard. It allows developers to write in their preferred programming
 language and compile the code into a Wasm module or a plugin.
@@ -5883,29 +5873,29 @@ application.
 To compile a custom filter into a Wasm plugin that's compatible with
 Envoy proxy, we can use one of the available SDKs:
 
--   -   -   [[Go
-            SDK]{.underline}](https://github.com/tetratelabs/proxy-wasm-go-sdk)
+-   -   -   [Go
+            SDK](https://github.com/tetratelabs/proxy-wasm-go-sdk)
 
-        -   [[AssemblyScript
-            SDK]{.underline}](https://github.com/solo-io/proxy-runtime)
+        -   [AssemblyScript
+            SDK](https://github.com/solo-io/proxy-runtime)
 
-        -   [[C++
-            SDK]{.underline}](https://github.com/proxy-wasm/proxy-wasm-cpp-sdk)
+        -   [C++
+            SDK](https://github.com/proxy-wasm/proxy-wasm-cpp-sdk)
 
-        -   [[Rust
-            SDK]{.underline}](https://github.com/proxy-wasm/proxy-wasm-rust-sdk)
+        -   [Rust
+            SDK](https://github.com/proxy-wasm/proxy-wasm-rust-sdk)
 
-        -   [[Zig
-            SDK]{.underline}](https://github.com/mathetake/proxy-wasm-zig-sdk)
+        -   [Zig
+            SDK](https://github.com/mathetake/proxy-wasm-zig-sdk)
 
 Since all SDKs implement the
-same [[specification]{.underline}](https://github.com/proxy-wasm/spec),
+same [specification](https://github.com/proxy-wasm/spec),
 the choice of an SDK comes down to the preferred programming language.
 
 Once we've compiled the code into a **.wasm** file, we need a way to
 inject the module into the Envoy proxy configuration. Historically, the
 way to do this was to use the EnvoyFilter resource we discussed earlier.
-However, with Istio 1.12, a [WasmPlugin]{.underline} resource was
+However, with Istio 1.12, a [WasmPlugin] resource was
 introduced that allows us to configure Wasm plugins for the workloads in
 the mesh.
 
@@ -6104,8 +6094,8 @@ err)**\
 **}**
 
 ***NOTE:** You can download the supporting YAML and other files
-from [[this Github
-repo]{.underline}](https://tetr8.io/cncf-source-files).*
+from [this Github
+repo](https://tetr8.io/cncf-source-files).*
 
 Save the above to **main.go**, then download the dependencies and use
 TinyGo to build the plugin:
@@ -6130,8 +6120,8 @@ to build and push the Wasm plugin to the registry:
 
 ***NOTE:** The **\[REPOSITORY\] **is the name of the repository you\'ve
 created in the Docker registry. You can use any OCI-compliant registry
-such as [DockerHub]{.underline} or [[GCP's container
-registry]{.underline}](https://cloud.google.com/container-registry).*
+such as [DockerHub] or [GCP's container
+registry](https://cloud.google.com/container-registry).*
 
 With the Wasm plugin in the registry, we can now craft the WasmPlugin
 resource:
@@ -6262,8 +6252,8 @@ To clean everything up, run the following commands:
 **kubectl delete -f wasm-plugin.yaml**\
 **kubectl delete -f httpbin.yaml**
 
-[[Chapter 7. Advanced
-Topics]{.underline}](https://learning.edx.org/course/course-v1:LinuxFoundationX+LFS144x+3T2022/block-v1:LinuxFoundationX+LFS144x+3T2022+type@sequential+block@397c4d3bec874bce8818d403fb6021cf)
+[Chapter 7. Advanced
+Topics](https://learning.edx.org/course/course-v1:LinuxFoundationX+LFS144x+3T2022/block-v1:LinuxFoundationX+LFS144x+3T2022+type@sequential+block@397c4d3bec874bce8818d403fb6021cf)
 
 # Chapter Overview
 
@@ -6356,19 +6346,15 @@ endpoints in the **istio-system** namespace.
 
 Here is a slightly pruned listing that lists only **bookinfo** services:
 
-**ENDPOINT         STATUS    OUTLIER CHECK  CLUSTER**\
-**10.32.0.7:9080   HEALTHY   OK           
- outbound\|9080\|\|details.default.svc.cluster.local**\
-**10.32.0.8:9080   HEALTHY   OK           
- outbound\|9080\|\|reviews.default.svc.cluster.local**\
-**10.32.0.9:9080   HEALTHY   OK           
- outbound\|9080\|\|reviews.default.svc.cluster.local**\
-**10.32.1.7:9080   HEALTHY   OK           
- outbound\|9080\|\|ratings.default.svc.cluster.local**\
-**10.32.1.8:9080   HEALTHY   OK           
- outbound\|9080\|\|reviews.default.svc.cluster.local**\
-**10.32.1.9:9080   HEALTHY   OK           
- outbound\|9080\|\|productpage.default.svc.cluster.local**
+
+|ENDPOINT|STATUS|OUTLIER|CHECK|CLUSTER|
+|:----|
+|10.32.0.7:9080|HEALTHY|OK|outbound|9080|details.default.svc.cluster.local|
+|10.32.0.8:9080|HEALTHY|OK|outbound|9080|reviews.default.svc.cluster.local|
+|10.32.0.9:9080|HEALTHY|OK|outbound|9080|reviews.default.svc.cluster.local|
+|10.32.1.7:9080|HEALTHY|OK|outbound|9080|ratings.default.svc.cluster.local|
+|10.32.1.8:9080|HEALTHY|  OK          |   outbound|9080 |reviews.default.svc.cluster.local|
+|10.32.1.9:9080  | HEALTHY |  OK         |    outbound|9080 |productpage.default.svc.cluster.local|
 
 The endpoints listing for the **ratings** service is similar, but the
 issue is even more pronounced since **ratings** does not make any
@@ -6481,8 +6467,8 @@ overriding that policy for specific workloads that deviate from the
 default.
 
 ***Note:** You can download the supporting YAML and other files
-from [[this Github
-repo]{.underline}](https://tetr8.io/cncf-source-files).*
+from [this Github
+repo](https://tetr8.io/cncf-source-files).*
 
 Save the above to a file named **sidecars.yaml** and apply it to your
 Kubernetes cluster.
@@ -6566,17 +6552,17 @@ to target these workloads using labels as selectors.
 A pod running on Kubernetes is associated with a Kubernetes service
 account and a namespace. That is the basis for its SPIFFE identity.
 Similarly, the workload running on a VM will require an associated
-namespace and service account. It is worth mentioning that [[Istio
+namespace and service account. It is worth mentioning that [Istio
 version 1.14 introduced support for
-SPIRE,]{.underline}](https://istio.io/latest/news/releases/1.14.x/announcing-1.14/#support-for-the-spire-runtime) which
+SPIRE,](https://istio.io/latest/news/releases/1.14.x/announcing-1.14/#support-for-the-spire-runtime) which
 opens the door to basing the SPIFFE identity on alternative pieces of
 information.
 
-Istio provides the [WorkloadEntry]{.underline} custom resource as a
+Istio provides the [WorkloadEntry] custom resource as a
 mechanism for configuring the VM workload and providing all of these
 details: the namespace, labels, and service account.
 
-Istio also provides the [WorkloadGroup]{.underline} custom resource as a
+Istio also provides the [WorkloadGroup] custom resource as a
 template for WorkloadEntry resources, which can be automatically created
 when Istio registers a workload with the mesh.
 
@@ -6681,7 +6667,7 @@ will automatically create a WorkloadEntry custom resource.
 
 Finally, deploy the BookInfo sample application, as follows:
 
-1.  1.  1.  Turn on sidecar-injection:\
+        1.  Turn on sidecar-injection:\
             **kubectl label ns default istio-injection=enabled**
 
         2.  Deploy the BookInfo sample application:\
@@ -6852,8 +6838,8 @@ it was created.
 
 An east-west gateway is necessary to enable communication between the
 sidecar that will be running on the VM and istiod, the Istio control
-plane (see the [[Istio
-documentation]{.underline}](https://istio.io/latest/docs/ops/deployment/vm-architecture/)).
+plane (see the [Istio
+documentation](https://istio.io/latest/docs/ops/deployment/vm-architecture/)).
 
 1.  Install the east-west gateway:\
     **./samples/multicluster/gen-eastwest-gateway.sh \--single-cluster
@@ -6868,7 +6854,7 @@ documentation]{.underline}](https://istio.io/latest/docs/ops/deployment/vm-archi
 
 # Create the WorkloadGroup
 
-A [WorkloadGroup]{.underline} is a template for WorkloadEntry objects.
+A [WorkloadGroup] is a template for WorkloadEntry objects.
 
 **apiVersion: networking.istio.io/v1alpha3**\
 **kind: WorkloadGroup**\
@@ -6883,8 +6869,8 @@ A [WorkloadGroup]{.underline} is a template for WorkloadEntry objects.
 **    serviceAccount: bookinfo-ratings**
 
 ***Note:** You can download the supporting YAML and other files
-from [[this Github
-repo]{.underline}](https://tetr8.io/cncf-source-files).*
+from [this Github
+repo](https://tetr8.io/cncf-source-files).*
 
 Save the above to a file named **ratings-workloadgroup.yaml** and apply
 it:
@@ -6903,7 +6889,7 @@ We now focus on installing and configuring the sidecar on the VM.
 The Istio CLI provides a command to automatically generate all artifacts
 needed to configure the VM:
 
-1.  1.  1.  Create a subdirectory to collect the artifacts to be
+        1.  Create a subdirectory to collect the artifacts to be
             generated:\
             **mkdir vm_files**
 
